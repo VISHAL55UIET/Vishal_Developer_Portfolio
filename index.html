@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishal - Developer Portfolio</title>
+  <!-- Link to Google Fonts for Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(to right, #2a2a72, #009ffd);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background-color: rgba(0, 0, 50, 0.7);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .left {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .right ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .right li {
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+    .right a {
+      color: white;
+      text-decoration: none;
+      font-weight: 400;
+      transition: all 0.3s ease;
+      font-size: 1rem;
+    }
+
+    /* Hover effect for the links */
+    .right a:hover {
+      color: rgb(122, 14, 222);
+      transform: translateY(-3px);
+    }
+
+    .firstSection {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 80px 40px;
+      gap: 50px;
+      min-height: 80vh;
+    }
+
+    .leftSection {
+      font-size: 2.5rem;
+      line-height: 1.5;
+      font-weight: 500;
+    }
+
+    .leftSection .purple {
+      color: rgb(122, 14, 222);
+    }
+
+    .buttons {
+      padding-top: 30px;
+    }
+
+    .btn {
+      padding: 12px 30px;
+      background: #1e2167;
+      color: white;
+      border: 2px solid white;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: rgb(122, 14, 222);
+      border-color: rgb(122, 14, 222);
+      transform: translateY(-5px);
+    }
+
+    .rightSection {
+      background-color: rgb(103, 139, 230); /* Changed the background color to black */
+      padding: 30px;
+      border-radius: 15px;
+    }
+
+    .rightSection img {
+
+      width: 100%;
+      max-width: 400px;
+      border-radius: 50%;
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .rightSection img:hover {
+      transform: scale(1.05);
+    }
+
+    .secondSection {
+      padding: 80px 40px;
+      background-color: rgba(0, 0, 50, 0.7);
+      border-radius: 15px;
+    }
+
+    .secondSection h1 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .box {
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .vertical {
+      flex: 1;
+      max-width: 300px;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .vertical:hover {
+      transform: translateY(-10px);
+    }
+
+    .vertical img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .vertical-title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .vertical-desc {
+      color: gray;
+      font-size: 0.9rem;
+    }
+
+    .horizontal-line {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: white;
+      z-index: -1;
+    }
+
+    hr {
+      border: 0;
+      background-color: rgb(122, 14, 222);
+      height: 1.2px;
+      margin: 40px 0;
+    }
+
+    footer {
+      background-color: #0e0e1a;
+      padding: 40px 0;
+      text-align: center;
+      color: white;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer a {
+      color: rgb(122, 14, 222);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: white;
+    }
+
+    .footer-rights {
+      color: gray;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="left">Vishal Portfolio</div>
+      <div class="right">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">About</a></li>
+          <li><a href="/">Services</a></li>
+          <li><a href="/">Projects</a></li>
+          <li><a href="/">Contact Me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="firstSection">
+      <div class="leftSection">
+        <p>Hi, My name is <span class="purple">Vishal</span></p>
+        <p>and I am a passionate <span id="element"></span></p>
+        <div class="buttons">
+          <button class="btn" onclick="window.location.href='path-to-resume.pdf'">Download Resume</button>
+          <button class="btn" onclick="window.location.href='https://github.com/your-username'">Visit Github</button>
+        </div>
+      </div>
+      <div class="rightSection">
+        <img src="NNEW.png.png" alt="Vishal Developer" />
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="secondSection">
+      <h1>Work Experience</h1>
+      <div class="box">
+        <div class="vertical">
+          <img src="developer.png.png" alt="HTML Developer" />
+          <div class="vertical-title">HTML Developer (2021-2024)</div>
+          <div class="vertical-desc">I’m an HTML Developer focused on building clean, responsive websites with a strong emphasis on accessibility and performance. Always learning and improving my skills to create better user experiences.
+
+          </div>
+        </div>
+        <div class="vertical">
+          <img src="fb.png.png" alt="Node.js Developer" />
+          <div class="vertical-title">CSS Developer (2023-2024)</div>
+          <div class="vertical-desc">I’m a CSS Developer with a passion for styling clean, responsive, and visually appealing websites. I focus on creating smooth, user-friendly designs with attention to detail and performance.</div>
+        </div>
+        <div class="vertical">
+          <img src="youtube.png.png" alt="Frontend Developer" />
+          <div class="vertical-title">Frontend Developer (2022-2023)</div>
+          <div class="vertical-desc">I’m a Frontend Developer who loves creating dynamic, responsive, and visually appealing web experiences. With a focus on HTML, CSS, and JavaScript, I build user-friendly interfaces that are both functional and beautiful.</div>
+        </div>
+        <div class="vertical">
+          <img src="twitter.png.png" alt="Full Stack Developer" />
+          <div class="vertical-title">Full Stack Developer (2024-present)</div>
+          <div class="vertical-desc">I’m a Full Stack Developer skilled in both frontend and backend technologies. From building responsive user interfaces to designing scalable server-side solutions, I enjoy creating end-to-end web applications that are efficient, functional, and user-friendly.</div>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <div class="footer-first">
+        <h3>Vishal Developer Portfolio</h3>
+      </div>
+      <div class="footer-second">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">About</a></li>
+          <li><a href="/">Services</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-rights">
+      Copyright &#169; vishalportfolio.com | All rights reserved
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer', 'Graphic Designer', 'Web Designer', 'Content Creator'],
+      typeSpeed: 50,
+    });
+  </script>
+</body>
+
+</html>
