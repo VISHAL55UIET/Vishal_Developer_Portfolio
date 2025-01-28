@@ -1,2 +1,2 @@
 # Vishal_Developer_Portfolio
-I developed this portfolio website using HTML,CSSS JAVASCRIPT.
+I developed this portfolio website using HTML,CSS JAVASCRIPT.
